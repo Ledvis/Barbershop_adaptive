@@ -1,7 +1,8 @@
 var nav = document.querySelector(".main-nav");
 var toggle = document.querySelector(".main-nav__toggle");
+var showPopup = document.querySelector(".main-nav__user-login");
 var popup = document.querySelector(".popup");
-var closePopup = popup.querySelector(".btn-green");
+var closePopup = popup.querySelector(".popup__close");
 var form = document.querySelector(".form__blank");
 var email = document.getElementById("email");
 
@@ -18,12 +19,10 @@ toggle.addEventListener("click", function(event) {
 	}
 });
 
-form.addEventListener("submit", function(event) {
-	if (!email.validity.valid) {
-		popup.classList.add("popup--show");
-		event.preventDefault();
-	}
-}, false);
+showPopup.addEventListener("click", function(event) {
+	event.preventDefault();
+	popup.classList.add("popup--show");
+});
 
 closePopup.addEventListener("click", function(event) {
 	event.preventDefault();
