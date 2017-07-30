@@ -1,0 +1,265 @@
+.catalog {
+	color: rgb(0, 0, 0);
+	text-align: center;
+	background-color: rgb(248, 245, 242);
+}
+
+.catalog__wrapper {
+	@include container-fluid();
+	padding: 30px 20px;
+}
+
+.catalog__title {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.catalog__anchor {
+	display: none;
+}
+
+.catalog__item {
+	width: 280px;
+	margin: 0 auto;
+	text-align: left;
+	border: 1px solid rgb(229, 221, 213);
+	&:first-of-type {
+		margin-top: 30px;
+	}
+	&:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+}
+
+.catalog__img {
+	position: relative;
+	margin: 0;
+	img {
+		display: block;
+		width: 280px;
+		height: auto;
+	}
+}
+
+.catalog__caption {
+	position: absolute;
+	bottom: 29px;
+	left: 0;
+	width: 176px;
+	height: 50px;
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: rgb(130, 101, 80);
+	&::before {
+		content: "";
+		position: absolute;
+		right: -9px;
+		border: 25px solid rgb(130, 101, 80);
+		border-left-width: 5px;
+		border-right-width: 5px;
+		border-right-color: transparent;
+	}
+}
+
+.catalog__inner {
+	padding: 20px;
+}
+
+.catalog__promo {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.catalog__author {
+	display: block;
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.catalog__tags-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.catalog__tag {
+	@include border-box();
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding-left: 44px;
+	&:nth-of-type(n+3) {
+		margin-top: 10px;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../img/sprite.png) no-repeat;
+	}
+}
+
+.catalog__tag--scissors {
+	&::before {
+		width: 21px;
+		height: 20px;
+		background-position: -68px -356px;
+	}
+}
+
+.catalog__tag--beard {
+	&::before {
+		width: 23px;
+		height: 21px;
+		background-position: -45px -356px;
+	}
+}
+
+.catalog__tag--mustache {
+	padding-left: 52px;
+	&::before {
+		top: 5px;
+		width: 45px;
+		height: 12px;
+		background-position: -0px -356px;
+	}
+}
+
+@media #{$tablet-width} {
+	.catalog__wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 40px 0;
+	}
+	.catalog__anchor {
+		display: inline-block;
+	}
+	.catalog__title {
+		font-size: 40px;
+		line-height: 56px;
+	}
+	.catalog__item {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: stretch;
+		width: 100%;
+		padding: 0;
+		&:not(:last-of-type) {
+			margin-bottom: 40px;
+		}
+	}
+	.catalog__img {
+		flex-shrink: 0;
+		width: 270px;
+		img {
+			width: 270px;
+		}
+	}
+	.catalog__caption {
+		top: 35px;
+		bottom: 0;
+	}
+	.catalog__inner {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 50px;
+		padding-right: 80px;
+	}
+	.catalog__descr {
+		padding: 0;
+		margin-bottom: auto;
+	}
+	.catalog__author {
+		margin-bottom: 40px;
+	}
+	.catalog__promo {
+		margin: 0;
+	}
+	.catalog__tags-list {
+		width: 50%;
+		justify-content: space-between;
+		padding: 0;
+	}
+}
+
+@media #{$desktop-width} {
+	.catalog__item {
+		position: relative;
+		&:not(:first-of-type) {
+			flex-direction: column;
+			width: 294px;
+			margin: 0;
+		}
+	}
+	.catalog__img--big {
+		width: 480px;
+		img {
+			width: 480px;
+		}
+	}
+	.catalog__img--small {
+		width: 294px;
+		img {
+			width: 294px;
+		}
+	}
+	.catalog__img {
+		position: static;
+	}
+	.catalog__caption {
+		top: 44px;
+		right: 0;
+		left: auto;
+		&::before {
+			left: -9px;
+			right: auto;
+			border: 25px solid rgb(130, 101, 80);
+			border-left-width: 5px;
+			border-right-width: 5px;
+			border-left-color: transparent;
+		}
+	}
+	.catalog__inner--big {
+		padding: 40px;
+		padding-top: 130px;
+		padding-right: 140px;
+	}
+	.catalog__inner--small {
+		padding: 30px;
+	}
+	.catalog__author {
+		margin-bottom: 15px;
+	}
+	.catalog__tags-list {
+		width: 100%;
+		margin-top: 15px;
+	}
+}
