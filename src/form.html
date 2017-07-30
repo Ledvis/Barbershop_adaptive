@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>Барбершоп "Бородинский"</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="photo">
+	<header class="page-header">
+		<h1 class="visually-hidden">Барбершоп &laquo;Бородинский&raquo; &mdash; истино мужская классика</h1>
+		<a href="index.html" class="page-header__logo">
+			<picture>
+				<source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
+				<source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+				<img src="img/logo-mobile.png" alt="">
+			</picture>
+		</a>
+		<nav class="main-nav  main-nav--closed  main-nav--nojs">
+			<button class="main-nav__toggle">Открыть меню</button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+					<li class="main-nav__list-item"><a href="index.html">Главная</a></li>
+					<li class="main-nav__list-item"><a href="photo.html">Наши работы</a></li>
+					<li class="main-nav__list-item"><a href="#">Прайс</a></li>
+					<li class="main-nav__list-item  main-nav__list-item--active"><a>Записаться</a></li>
+					<li class="main-nav__list-item"><a href="#">Контакты</a></li>
+				</ul>
+				<ul class="main-nav__user-list">
+					<li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<section class="form">
+		<div class="form__wrapper">
+			<h2 class="form__title">Записаться на стрижку</h2>
+			<a class="catalog__anchor  btn" href="index.html">На главную</a>
+			<form class="form__field" action="#" method="post">
+				<div class="form__full-name">
+					<input type="text" placeholder="Фамилия">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Отчество">
+				</div>
+				<div class="form__contacts">
+					<input type="tel" placeholder="Контактный телефон">
+					<input type="email" placeholder="Контактный e-mail">
+				</div>
+				<div class="form__textarea">
+					<textarea name="form__textarea" id="form__textarea" placeholder="Доп. ифнормация для мастера"></textarea>
+				</div>
+				<div class="form__models-list">
+					<h3 class="form__list-title">Выберите модель бороды:</h3>
+					<div class="form__list-flex">
+						<label for="radio-1">
+							<input type="radio" name="radio" id="radio-1" checked>
+							<span class="form__indicator"></span>
+							Адмирал
+						</label>
+						<label for="radio-2">
+							<input type="radio" name="radio" id="radio-2">
+							<span class="form__indicator"></span>
+							Лесоруб
+						</label>
+						<label for="radio-3">
+							<input type="radio" name="radio" id="radio-3">
+							<span class="form__indicator"></span>
+							Полярник
+						</label>
+						<label for="radio-4">
+							<input type="radio" name="radio" id="radio-4">
+							<span class="form__indicator"></span>
+							Боярин
+				 		</label>
+						<label for="radio-5">
+							<input type="radio" name="radio" id="radio-5">
+							<span class="form__indicator"></span>
+							Мудрец
+						</label>
+					</div>
+				</div>
+				<div class="form__services-list">
+					<h3 class="form__list-title">Дополнительные услуги:</h3>
+					<div class="form__list-flex">
+						<input type="checkbox" name="checkbox-1" id="checkbox-1">
+						<input type="checkbox" name="checkbox-2" id="checkbox-2">
+						<input type="checkbox" name="checkbox-3" id="checkbox-3">
+						<input type="checkbox" name="checkbox-4" id="checkbox-4">
+						<input type="checkbox" name="checkbox-5" id="checkbox-5">
+						<input type="checkbox" name="checkbox-6" id="checkbox-6">
+						<div class="form__services-flex">
+							<label for="checkbox-1">Подкрасить бороду</label>
+							<label for="checkbox-2">Накрутить усы</label>
+						</div>
+						<div class="form__services-flex">
+							<label for="checkbox-3">Причесать бороду</label>
+							<label for="checkbox-4">Подровнять виски</label>
+						</div>
+						<div class="form__services-flex">
+							<label for="checkbox-5">Убрать седину</label>
+							<label for="checkbox-6">Отполировать лысину</label>
+						</div>
+					</div>
+				</div>
+				<input class="form__submit" type="submit" value="Отправить заявку">
+			</form>
+		</div>
+	</section>
+	<footer class="page-footer">
+		<div class="page-footer__wrapper">
+			<p class="page-footer__contacts">
+				<b class="page-footer__promo">Барбершоп &laquo;Бородинский&raquo;</b>
+				<span class="page-footer__adress">г. Санк-Петербург, ул. Большая Конюшенка 19/8</span>
+				<a class="page-footer__tel" href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (812) 555-66-66</a>
+				<a class="page-footer__write" href="#">Напишите нам!</a>
+			</p>
+			<p class="page-footer__social">
+				Давайте дружить!
+				<span class="social-links">
+					<a class="social-links__item  social-links__item--vk" href="#">Мы в Вконтакте</a>
+					<a class="social-links__item  social-links__item--fb" href="#">Мы в Фейсбук</a>
+					<a class="social-links__item  social-links__item--ig" href="#">Мы в Инстаграм</a>
+				</span>
+			</p>
+			<p class="page-footer__copyright">
+				Разработано:
+				<a class="page-footer__copyright-link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+			</p>
+		</div>
+	</footer>
+	<div class="popup">
+		<h2 class="popup__title">Личный кабинет</h2>
+		<p class="popup__descr">Введите свой логин и пароль чтобы войти</p>
+		<form class="popup__form" action="#" method="post">
+			<input class="popup__login" type="text" name="popup__login" id="popup__login" placeholder="Логин">
+			<input class="popup__password" type="password" name="popup__password" id="popup__password" placeholder="Пароль">
+			<div class="popup__positioner">
+				<input class="popup__remember" type="checkbox" name="popup__remember" id="popup__remember">
+				<span class="popup__remember-indicator"></span>
+				<label class="popup__label" for="popup__remember">Запомните меня</label>
+				<a class="popup__forget" href="#">Я забыл пароль!</a>
+			</div>
+			<div class="popup__positioner">
+				<button class="popup__enter" type="submit">Войти <span class="popup__submit-hidden">в личный кабинет</span></button>
+				<button class="popup__close" type="button">Закрыть</button>
+			</div>
+		</form>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
